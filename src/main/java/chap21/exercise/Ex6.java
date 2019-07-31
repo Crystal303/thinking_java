@@ -3,6 +3,11 @@ package chap21.exercise;
 import java.util.*;
 import java.util.concurrent.*;
 
+/**
+ * 睡眠1至10秒随机数量的时间
+ *
+ * @author crystal303
+ */
 public class Ex6 implements Runnable {
     Random rand = new Random();
 

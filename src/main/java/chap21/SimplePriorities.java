@@ -3,11 +3,17 @@ package chap21;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * 优先级较低的线程仅仅是执行频率较低
+ * 在绝大多数时间里 所有线程都应该以默认的优先级运行
+ * 试图操作线程优先级通常是一种错误 数学计算够被打断 控制台输出不能
+ *
+ * @author crystal303
+ */
 public class SimplePriorities implements Runnable {
     private int countDown = 5;
     private volatile double d;
     private int priority;
-    private static int countYeild = 0;
 
     public SimplePriorities(int priority) {
         this.priority = priority;
@@ -26,8 +32,6 @@ public class SimplePriorities implements Runnable {
                 d += (Math.PI + Math.E) / (double)i;
                 if (i % 1000 == 0) {
                     Thread.yield();
-                    countYeild++;
-                    System.out.println("Thread.yield() : " + countYeild);
                 }
             }
             System.out.println(this);

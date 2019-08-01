@@ -1,5 +1,10 @@
 package chap21;
 
+/**
+ * 创建有响应的UI
+ *
+ * @author crystal303
+ */
 class UnresponsiveUI {
     private volatile double d = 1;
     public UnresponsiveUI() throws Exception {

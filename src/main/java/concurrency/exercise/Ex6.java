@@ -1,4 +1,4 @@
-package chap21.exercise;
+package concurrency.exercise;
 
 import java.util.*;
 import java.util.concurrent.*;

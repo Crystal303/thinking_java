@@ -1,4 +1,4 @@
-package chap21;
+package concurrency;
 
 public class LiftOff implements Runnable {
     protected int countDown = 10;

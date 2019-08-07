@@ -1,4 +1,4 @@
-package chap21.sharedresources;
+package concurrency.sharedresources;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -19,8 +19,8 @@ public class EvenChecker implements Runnable {
         while (!generator.isCanceled()) {
             int val = generator.next();
             if (val % 2 != 0) {
-                System.out.println(val + " not even");
-                generator.cancle();
+                System.out.println(val + " not even" + " id: " + id);
+                generator.cancel();
             }
         }
     }

@@ -1,4 +1,6 @@
-package chap21.sharedresources;
+package concurrency.sharedresources;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * IntGenerator的一个实现类
@@ -12,6 +14,11 @@ public class EvenGenerator extends IntGenerator {
     public int next() {
         // Danger point here
         ++currentEvenValue;
+        try {
+            TimeUnit.NANOSECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         ++currentEvenValue;
         return currentEvenValue;
     }

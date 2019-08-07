@@ -1,4 +1,4 @@
-package chap21.sharedresources;
+package concurrency.sharedresources;
 
 /**
  * 消费者任务的抽象方法
@@ -16,7 +16,7 @@ public abstract class IntGenerator {
     /**
      * allow this to be canceled:
      */
-    public void cancle() {
+    public void cancel() {
         canceled = true;
     }
     public boolean isCanceled() {

@@ -7,7 +7,7 @@ import java.util.*;
 
 public class DirList1a {
     public static void main(final String[] args) {
-        File path = new File("/home/crystal303/IdeaProjects/thinking_java/src/main/java/chap21");
+        File path = new File("/home/crystal303/IdeaProjects/thinking_java/src/main/java/concurrency");
         final String[] list;
         if(args.length < 2) {
             list = path.list();

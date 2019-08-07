@@ -1,4 +1,4 @@
-package chap21.ThreadFactory;
+package concurrency.ThreadFactory;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

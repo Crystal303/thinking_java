@@ -1,4 +1,4 @@
-package chap21.exercise;
+package concurrency.exercise;
 
 class Ex1RunnerA implements Runnable {
     public Ex1RunnerA() {
